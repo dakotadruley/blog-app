@@ -49,8 +49,8 @@ describe('comment routes', () => {
       .then(res => {
         expect(res.body).toEqual({
           ...comment,
-          author: 'Test Author',
-          content: 'bad!'
+          author: expect.any(String),
+          content: expect.any(String)
         });
       });
   });
